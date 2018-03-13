@@ -1,0 +1,65 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<div class="container">
+		<div class="archive-info-wrap">
+			<div class="tag-wrap">
+				<span class="post-count">{{plural pagination.total empty='0 Post' singular='% Post' plural='% Posts'}}</span>
+				<h4 class="tag-name">Tag: {{tag.name}}</h4>
+				{{#if tag.description}}
+				<div class="tag-description">{{tag.description}}</div>
+				{{/if}}
+			</div>
+		</div>
+</div>
+<!-- start main content area -->
+<div class="container">
+	<div class="item-container clearfix">
+		{{#foreach posts}}
+		<!-- start article -->
+		<article id="{{id}}" class="item post-wrap {{post_class}}">
+			{{#if featured}}
+			<div class="featured">
+				<i class="fa fa-star"></i>
+			</div>
+			{{/if}}
+			{{#if feature_image}}
+			<div class="featured-media">
+				<a href="{{url}}" title="post-title"><img src="{{img_url feature_image}}" alt="{{{title}}}"></a>
+			</div>
+			{{/if}}
+			<header class="post-header">
+				<div class="post-meta">
+					<span class="date">{{date format="MMM DD, YYYY"}}</span> &#45;
+					{{#author}}
+					<span class="author">By <a href="{{url}}" title="{{name}}">{{name}}</a></span>
+					{{/author}}
+				</div>
+				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+			</header>
+			<div class="post-content">
+				{{content words="36"}}
+			</div>
+			{{#if tags}}
+			<div class="tag-list">
+
+				{{tags separator=", " prefix="Tags:&nbsp;"}}
+			</div>
+			{{/if}}
+			<div class="permalink">
+				<a href="{{url}}" class="btn btn-default">Read More</a>
+			</div>
+			<footer class="post-footer clearfix">
+				{{> share}}
+				<div class="pull-right comment-count">
+					<i class="fa fa-comment-o"></i>
+					<a href="{{url}}#disqus_thread">0 Comments</a>
+				</div>
+			</footer>
+		</article>
+		<!-- end article -->
+		{{/foreach}}
+	</div>
+</div>
+<!-- end main content area -->
+{{pagination}}

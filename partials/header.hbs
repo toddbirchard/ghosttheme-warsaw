@@ -1,0 +1,40 @@
+<div class="page-wrap="{{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}})" {{else}} no-image" {{/if}}>
+	<div class="overlay">
+		<!-- start header -->
+		<header class="main-header">
+			<!-- start navbar -->
+			<div class="navbar-wrap navbar-fixed-top">
+				<div class="container">
+					<div class="row">
+					<div class="main-nav">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+			            	</button>
+			            	</div>
+		            	{{navigation}}
+						{{> search}}
+					</div>
+					</div>
+				</div>
+			</div>
+			<!-- end navbar -->
+			<div class="container">
+				<div class="row branding">
+					<div class="logo-wrap">
+						<!-- start logo -->
+						{{#if @blog.logo}}
+						<a class="logo image-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+						{{else}}
+						<a class="logo" href="{{@blog.url}}">{{@blog.title}}</a>
+						{{/if}}
+						<!-- end logo -->
+					</div>
+					<div class="intro">{{@blog.description}}</div>
+				</div>
+			</div>
+		</header>
+		<!-- end header -->

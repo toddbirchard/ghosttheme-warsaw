@@ -1,0 +1,18 @@
+<div class="prev-next-wrap clearfix">
+	{{#next_post}}
+	<a class="previous-post pull-left {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-image{{/if}}" href="{{url}}">
+		<div class="prev-next-inner">
+			<span class="link-text"><i class="fa fa-long-arrow-left fa-fw"></i>Previous Post</span>
+			<h3 class="title">{{title}}</h3>
+		</div>
+	</a>
+	{{/next_post}}
+    {{#prev_post}}
+    <a class="next-post pull-right {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-image{{/if}}" href="{{url}}">
+		<div class="prev-next-inner">
+			<span class="link-text">Next Post<i class="fa fa-long-arrow-right fa-fw"></i></span>
+			<h3 class="title">{{title}}</h3>
+		</div>
+	</a>
+    {{/prev_post}}
+</div>
