@@ -8,4 +8,5 @@ Ghost theme being used on todd.industries.
 - Ghost
 - Express
 - Handlebars
-- Sass
+- Less
+- Gulp
