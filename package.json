@@ -1,4 +1,7 @@
 {
-  "name": "Vasha",
-  "version": "1.1.0"
+  "name": "Artisan",
+  "version": "1.1.0",
+  "config": {
+        "posts_per_page": 10
+    }
 }

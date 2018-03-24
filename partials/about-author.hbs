@@ -1,7 +1,7 @@
 <!-- start about the author -->
 {{# author}}
 <div class="about-author clearfix">
-	{{#if profile_image}}
+	{{#if author.profile_image}}
 		<a href="{{url}}"><img src="{{author.profile_image}}" alt="Author image" class="avatar pull-left"></a>
 		{{else}}
 		<a href="{{url}}"><img src="{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar pull-left"></a>
