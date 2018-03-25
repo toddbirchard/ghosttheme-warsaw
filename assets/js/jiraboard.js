@@ -9,7 +9,8 @@ var jira = new JiraClient( {
 });
 
 jira.issue.getIssue({
-    issueKey: 'TD-31'
+    issueKey: 'TD-29'
 }, function(error, issue) {
     console.log(issue.fields.summary);
+    console.log(error);
 });

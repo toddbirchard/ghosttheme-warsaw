@@ -23,19 +23,19 @@ var themeApp = {
 		$('.post').fitVids();
 	},
 	masonryLayout: function() {
-		$container = $('.item-container');
+		/*$container = $('.item-container');
     	$items = $('.item');
     	var $msnry = $container.masonry({
 			itemSelector: '.item',
 			columnWidth: '.item',
 			isAnimated: true,
-			transitionDuration: 0
+			transitionDuration: 1
 	    });
 	    $items.hide();
 	    $container.imagesLoaded(function() {
 			$items.addClass('animate').show();
 			$msnry.masonry();
-	    });
+		});*/
 	},
 	navBar: function() {
 		$(window).scroll(function () {

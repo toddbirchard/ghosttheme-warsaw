@@ -4,9 +4,6 @@
 @import "less_parts/variables.less";
 @import "less_parts/mixin.less";
 
-html {
-	height: 100%;
-}
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -14,7 +11,13 @@ body {
 	font-weight: 300;
 	height: 100%;
 	color: @text-color;
+	margin-top: -80px;
+
+	& > div {
+		padding-bottom: 80px;
+	}
 }
+
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
@@ -409,15 +412,19 @@ pre {
 	main content area
 ====================================================*/
 .item-container {
-	background: @white;
 	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 .item {
 	-webkit-box-shadow: inset 1px 1px @border-color, 1px 1px @border-color;
 	-moz-box-shadow: inset 1px 1px @border-color, 1px 1px @border-color;
 	box-shadow: inset 1px 1px @border-color, 1px 1px @border-color;
 	.transition(background 0.25s);
-	.opacity(0);
+	background: #FFFFFF;
+	margin-bottom: 22px;
 }
 .post-wrap {
 	padding: 40px;
@@ -668,6 +675,7 @@ pre {
 }
 .prev-next-wrap {
 	padding:  40px;
+	height: 230px;
 	.previous-post, .next-post {
 		background: @theme-color;
 		width: 50%;
@@ -902,7 +910,11 @@ pre {
 ====================================================*/
 @media (min-width: 992px) {
 	.item {
-		width: 50%;
+		width: 49%;
+		display: inline-block;
+		opacity: 1;
+		height: 690px;
+		background: #FFFFFF;
 	}
 	.single-post-container {
 		.single-content-wrap {
