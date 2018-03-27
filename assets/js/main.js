@@ -85,16 +85,16 @@ var themeApp = {
 			var url = $(this).find('.post-url').html();
 			var placeHolder = $this.find('.share-count');
 
-			$.getJSON( 'http://graph.facebook.com/?id=' + url, function( fbdata ) {
+			$.getJSON( 'https://graph.facebook.com/?id=' + url, function( fbdata ) {
 		        fbc = fbdata.shares;
 		        $(placeHolder).attr('data-fbc', fbc);
 
 		    });
-		    $.getJSON( 'http://cdn.api.twitter.com/1/urls/count.json?url=' + url + '&callback=?', function( twitdata ) {
+		    $.getJSON( 'https://cdn.api.twitter.com/1/urls/count.json?url=' + url + '&callback=?', function( twitdata ) {
 		        twc = twitdata.count;
 		       $(placeHolder).attr('data-twc', twc);
 		    });
-		    $.getJSON( 'http://api.pinterest.com/v1/urls/count.json?url=' + url + '&callback=?', function( pindata ) {
+		    $.getJSON( 'https://api.pinterest.com/v1/urls/count.json?url=' + url + '&callback=?', function( pindata ) {
 		        pinc = pindata.count;
 		        $(placeHolder).attr('data-pinc', pinc);
 		    });

@@ -256,7 +256,7 @@ pre {
 }
 .shrink {
 	background: @white;
-	padding: 8px 0;
+	padding: 8px 15px;
 	border-bottom: 1px solid @border-color;
 	.nav {
 		li {
@@ -433,6 +433,8 @@ pre {
 	background: #FFFFFF;
 	margin-bottom: 22px;
 }
+
+
 .post-wrap {
 	padding: 30px;
 	overflow: hidden;
@@ -567,6 +569,10 @@ pre {
 	-moz-box-shadow: inset 0 1px @border-color;
 	box-shadow: inset 0 1px @border-color;
 	text-transform: uppercase;
+	@media (max-width: 767px) {
+		margin: 0 20px;
+	}
+
 	.pagination {
 		position: relative;
 		display: block;
@@ -950,7 +956,6 @@ pre {
 	}
 	.prev-next-wrap {
 		.previous-post, .next-post {
-
 			border-left: none;
 			width: 100%;
 			float: none;

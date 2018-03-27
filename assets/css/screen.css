@@ -308,7 +308,7 @@ pre {
 }
 .shrink {
   background: #FFFFFF;
-  padding: 8px 0;
+  padding: 8px 15px;
   border-bottom: 1px solid #f0f0f0;
 }
 .shrink .nav li a {
@@ -651,6 +651,11 @@ pre {
   -moz-box-shadow: inset 0 1px #f0f0f0;
   box-shadow: inset 0 1px #f0f0f0;
   text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .pagination-wrap {
+    margin: 0 20px;
+  }
 }
 .pagination-wrap .pagination {
   position: relative;
