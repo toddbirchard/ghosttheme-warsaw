@@ -1,7 +1,7 @@
 var JiraClient = require('jira-connector');
 
 var jira = new JiraClient( {
-    host: 'hackersandslackers.atlassian.net',
+    host: 'https://hackersandslackers.atlassian.net',
     basic_auth: {
         username: 'integrations',
         password: 'a9tw3rjw'

@@ -4,6 +4,11 @@
 @import "less_parts/variables.less";
 @import "less_parts/mixin.less";
 
+html {
+	width: 100%;
+	overflow-x: hidden;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -12,6 +17,8 @@ body {
 	height: 100%;
 	color: @text-color;
 	margin-top: -80px;
+	width: 100%;
+	overflow-x: hidden;
 
 	& > div {
 		padding-bottom: 80px;
@@ -427,7 +434,7 @@ pre {
 	margin-bottom: 22px;
 }
 .post-wrap {
-	padding: 40px;
+	padding: 30px;
 	overflow: hidden;
 	position: relative;
 	.featured {
@@ -913,7 +920,6 @@ pre {
 		width: 49%;
 		display: inline-block;
 		opacity: 1;
-		height: 690px;
 		background: #FFFFFF;
 	}
 	.single-post-container {
@@ -928,6 +934,9 @@ pre {
 	}
 }
 @media (max-width: 767px) {
+	.item {
+		margin: 10px 20px;
+	}
 	.search-wrap {
 		&.visible {
 			width: 100%;
