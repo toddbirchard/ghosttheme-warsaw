@@ -62,6 +62,11 @@ a {
 p {
 	margin: 0 0 24px;
 }
+
+hr {
+	margin-top: 40px;
+  margin-bottom: 40px;
+}
 iframe {
 	display: block; // to reset the unwanted extra whitespace at the bottom
 	border: 0;
@@ -174,7 +179,7 @@ pre {
 	navigation
 ====================================================*/
 .navbar-wrap {
-	padding: 16px 0;
+	padding: 16px;
 	.transition(all 0.4s);
 }
 .main-nav {
@@ -604,7 +609,7 @@ pre {
 	background: @white;
 	padding: 24px 40px;
 	height: 80px;
-	margin-bottom: 20px;
+	margin: 0 20px 20px;
 }
 .post-count {
 	position: absolute;
@@ -633,6 +638,7 @@ pre {
 		width: 32px;
 		height: 32px;
 		.border-radius(50%);
+
 	}
 	.author-name {
 		margin: 7px 56px 0 7px;
@@ -648,7 +654,11 @@ pre {
 		-webkit-box-shadow: inset 1px 1px @border-color, 1px 1px @border-color;
 		-moz-box-shadow: inset 1px 1px @border-color, 1px 1px @border-color;
 		box-shadow: inset 1px 1px @border-color, 1px 1px @border-color;
+		/*@media(max-width:600px) {
+			  padding-bottom: 157px;
+		}*/
 	}
+
 }
 .about-author-wrap {
 	padding:40px;
@@ -659,9 +669,17 @@ pre {
 		width: 80px;
 		height: 80px;
 		.border-radius(50%);
+		@media(max-width:600px) {
+			float:none !important;
+		}
 	}
 	.details {
 		margin-left: 96px;
+		@media(max-width:600px) {
+			margin-left: 0;
+			width: 100%;
+			margin-top: 20px;
+		}
 		.author {
 			font-size: 18px;
 			a {
@@ -677,6 +695,9 @@ pre {
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			color: @text-color-light;
+			.svg-inline--fa {
+				 margin-right: 5px;
+			}
 			.location {
 				margin-right: 8px;
 			}
@@ -692,6 +713,12 @@ pre {
 .prev-next-wrap {
 	padding:  40px;
 	height: 230px;
+	@media(max-width:800px) {
+		  height: 382px;
+		}
+	@media(max-width:600px) {
+		  height: 382px;
+		}
 	.previous-post, .next-post {
 		background: @theme-color;
 		width: 50%;

@@ -71,6 +71,10 @@ a:focus {
 p {
   margin: 0 0 24px;
 }
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 iframe {
   display: block;
   border: 0;
@@ -205,7 +209,7 @@ pre {
 	navigation
 ====================================================*/
 .navbar-wrap {
-  padding: 16px 0;
+  padding: 16px;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
@@ -689,7 +693,7 @@ pre {
   background: #FFFFFF;
   padding: 24px 40px;
   height: 80px;
-  margin-bottom: 20px;
+  margin: 0 20px 20px;
 }
 .post-count {
   position: absolute;
@@ -736,6 +740,9 @@ pre {
   -webkit-box-shadow: inset 1px 1px #f0f0f0, 1px 1px #f0f0f0;
   -moz-box-shadow: inset 1px 1px #f0f0f0, 1px 1px #f0f0f0;
   box-shadow: inset 1px 1px #f0f0f0, 1px 1px #f0f0f0;
+  /*@media(max-width:600px) {
+			  padding-bottom: 157px;
+		}*/
 }
 .about-author-wrap {
   padding: 40px;
@@ -750,8 +757,20 @@ pre {
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
+@media (max-width: 600px) {
+  .about-author-wrap .avatar {
+    float: none !important;
+  }
+}
 .about-author-wrap .details {
   margin-left: 96px;
+}
+@media (max-width: 600px) {
+  .about-author-wrap .details {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 .about-author-wrap .details .author {
   font-size: 18px;
@@ -781,6 +800,16 @@ pre {
 .prev-next-wrap {
   padding: 40px;
   height: 230px;
+}
+@media (max-width: 800px) {
+  .prev-next-wrap {
+    height: 382px;
+  }
+}
+@media (max-width: 600px) {
+  .prev-next-wrap {
+    height: 382px;
+  }
 }
 .prev-next-wrap .previous-post,
 .prev-next-wrap .next-post {
