@@ -484,6 +484,7 @@ pre {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 }
 .item {
   -webkit-box-shadow: inset 1px 1px #f0f0f0, 1px 1px #f0f0f0;
@@ -687,6 +688,8 @@ pre {
 .archive-info-wrap {
   background: #FFFFFF;
   padding: 24px 40px;
+  height: 80px;
+  margin-bottom: 20px;
 }
 .post-count {
   position: absolute;
